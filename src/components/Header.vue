@@ -27,9 +27,9 @@
 
     template{
         background: #222;
-                width: 1440px;
-        height: 74px;
-        flex-shrink: 0;
+            width: 1920px;
+            height: 74px;
+            flex-shrink: 0;
     }
 
     .Home{
@@ -41,6 +41,7 @@
         padding-right: 0px;
         align-items: center;
         flex-shrink: 0;
+        padding-right: 10px;
     }
 
     .Product{
@@ -98,10 +99,11 @@
 
       .logo{
         color: #FFF;
-font-family: Outfit;
-font-size: 25px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
+        font-family: Outfit;
+        font-size: 25px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        margin-right: 30px;
       }
 </style>

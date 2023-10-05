@@ -65,6 +65,7 @@
   margin-top: 150px;
 }
 .circle {
+  min-width: 200px;
   width: 548.453px;
   height: 549.005px;
   transform: rotate(0.5deg);
@@ -72,9 +73,9 @@
   border-radius: 50%;
   background: #FFB800;
   position: fixed;
-  top: 20px; /* Adjust the top position */
-  right: -150px; /* Adjust the right position */
-  margin-top: 60px; /* Adjust the top margin */
+  top: 20px;
+  right: -150px;
+  margin-top: 60px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -88,8 +89,8 @@
     transform: rotate(-90deg);
     flex-shrink: 0;
     position: fixed;
-    top: 30px; /* Adjust the top position */
-    right: 700px; /* Adjust the right position */
+    top: 30px; 
+    right: 700px; 
 }
 
 
@@ -104,42 +105,42 @@
     background: #222;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Центрирование по горизонтали */
-    justify-content: center; /* Центрирование по вертикали */
-    height: 100vh; /* Высота 100% видимой области */
-    margin: 0; /* Убираем отступы */
+    align-items: center; 
+    justify-content: center; 
+    margin: 0; 
   }
 
   .autumn, .high, .sale {
     transform: rotate(-10deg);
     font-style: normal;
-    font-weight: bold; /* Жирный шрифт */
+    font-weight: bold; 
     margin: 0;
   }
 
   .autumn {
     color: #FFF;
+    min-width: 601px;
     font-family: Gochi Hand;
     font-size: 40px;
     margin-left: 470px;
     margin-bottom: -25px;
-    margin-top: 200px; /* Отодвигаем немного вниз */
+    margin-top: 200px;
   }
 
   .high {
     color: #FFB800;
     font-family: Inter;
-    font-size: 100px; /* Уменьшен размер для смещения вправо */
-    margin-bottom: -20px; /* Немного опускаем надпись */
-    margin-left: 400px; /* Смещаем немного вправо */
+    font-size: 100px;
+    margin-bottom: -20px;
+    margin-left: 400px; 
   }
 
   .sale {
     color: #FFF;
     font-family: Inter;
-    font-size: 80px; /* Уменьшен размер для смещения вправо */
+    font-size: 80px;
     margin-left: 700px;
-    margin-top: -40px; /* Отодвигаем немного вниз */
+    margin-top: -40px; 
   }
 
 

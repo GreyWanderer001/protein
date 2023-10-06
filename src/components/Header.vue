@@ -9,7 +9,7 @@
     <header>
         <div class="navigator">
             <div class="navigator2">
-                <a class="logo" href="/home">FitFuel</a>
+                <a class="logo" href="/home">RobertFitFuel</a>
 
                 <div class="routes">
                 <a href="/home">Home</a>

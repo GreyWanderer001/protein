@@ -17,7 +17,11 @@
 
     <div class="wrapper">
         <div class="square" v-for="item in [1,2,3,4,5,6,7,8,9,10,11,12]">
-            <img src="../components/protein.png" alt="Your Image" class="img">
+            <div class="description">
+                <img src="../components/protein.png" alt="Your Image" class="img">
+                <a class="text">Optimum Nutrition</a>
+                <p class="text">Price: 20€</p>
+            </div>
         </div>
     </div>
    
@@ -26,7 +30,26 @@
 
 </template>
 
-<style >
+<style scoped>
+
+    .description{
+        display:flex;
+        justify-content:center;
+        flex-direction:column;
+        align-items:center;
+
+    }
+
+    .text{
+        color: #FFB800;
+        font-family: Inter;
+        font-size: 10px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        letter-spacing: 0.4px;
+        align-items: bottom;
+    }
 
     .wrapper {
         display:flex;

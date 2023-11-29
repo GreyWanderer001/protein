@@ -3,32 +3,73 @@
 </script>
 
 <template>
-
+  <div>
     <h5 class="product">ALL PRODUCTS</h5>
+
     <div class="container">
-        <div class="cat">
-            <a>PRICE</a>
-            <button><img class="photo" src="../components/strelka.png"></button>
-            <a>CATEGORY</a>
-            <button><img class="photo" src="../components/strelka.png"></button>
-        </div>
-        
+      <div class="cat">
+        <a >PRICE</a>
+        <button @click="sortByPrice"><img class="photo" src="../components/strelka.png"></button>
+        <a >NAME</a>
+        <button @click="sortByName"><img class="photo" src="../components/strelka.png"></button>
+      </div>
     </div>
 
     <div class="wrapper">
-        <div class="square" v-for="item in [1,2,3,4,5,6,7,8,9,10,11,12]">
-            <div class="description">
-                <img src="../components/protein.png" alt="Your Image" class="img">
-                <a class="text">Optimum Nutrition</a>
-                <p class="text">Price: 20€</p>
-            </div>
+      <div class="square" v-for="product in filteredProducts" :key="product.id">
+        <div class="description">
+          <img :src="product.image" alt="Product Image" class="img">
+          <a class="text">{{ product.name }}</a>
+          <p class="text">Price: {{ product.price }}€</p>
         </div>
+      </div>
     </div>
-   
-
-
-
+  </div>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      products: [
+        { id: 1, name: "Optimum Nutrition", price: 20, image: "src/components/protein.png" },
+        { id: 2, name: "Protein", price: 30, image: "src/components/protein.png" },
+        { id: 3, name: "Creatin Nutrition", price: 15, image: "src/components/b.webp" },
+        { id: 4, name: "Creatin Nutrition", price: 15, image: "src/components/b.webp" },
+        { id: 5, name: "Creatin Nutrition", price: 15, image: "src/components/b.webp" },
+        { id: 6, name: "Creatin Nutrition", price: 15, image: "src/components/b.webp" },
+        { id: 7, name: "Trenbolon Nutrition", price: 10, image: "src/components/e.png" },
+        { id: 8, name: "Trenbolon Nutrition", price: 10, image: "src/components/e.png" },
+        { id: 9, name: "Optimum Nutrition", price: 5, image: "src/components/protein.png" },
+        { id: 10, name: "Optimum Nutrition", price: 130, image: "src/components/protein.png" },
+        { id: 11, name: "Optimum Nutrition", price: 200, image: "src/components/protein.png" },
+        // Add more product objects as needed
+      ],
+      sortBy: "default", // "default", "price", or "name"
+    };
+  },
+  computed: {
+    filteredProducts() {
+      if (this.sortBy === "price") {
+        return [...this.products].sort((a, b) => a.price - b.price);
+      } else if (this.sortBy === "name") {
+        return [...this.products].sort((a, b) => a.name.localeCompare(b.name));
+      }
+      return this.products;
+    },
+  },
+  methods: {
+    sortByPrice() {
+      this.sortBy = "price";
+    },
+    sortByName() {
+      this.sortBy = "name";
+    },
+    // ... other methods
+  },
+};
+</script>
+
 
 <style scoped>
 
